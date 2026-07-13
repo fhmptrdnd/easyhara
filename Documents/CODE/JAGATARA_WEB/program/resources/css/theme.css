@@ -1,0 +1,10 @@
+@theme {
+    /* Farmora Brand Theme Colors */
+    --color-brand-lime: #d4fc34;
+    --color-brand-dark: #0f1c0f;
+    --color-brand-green-medium: #1b381e;
+    --color-brand-light-gray: #f4f6f4;
+    --color-brand-text-dark: #111827;
+    --color-brand-text-gray: #4b5563;
+    --color-brand-border: #e5e7eb;
+}

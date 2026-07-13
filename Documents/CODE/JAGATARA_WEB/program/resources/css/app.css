@@ -1,0 +1,106 @@
+@import 'tailwindcss';
+@import './theme.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Custom styling for diagonal arrow links across pages (Light Mode: Black background, Dark Mode: White background) */
+.diagonal-arrow-link {
+    background-color: #111827;
+    color: #ffffff;
+    transition: all 300ms ease-in-out;
+}
+.diagonal-arrow-link:hover {
+    background-color: #d4fc34;
+    color: #111827;
+    transform: scale(1.05);
+}
+body.dark-mode .diagonal-arrow-link {
+    background-color: #ffffff;
+    color: #111827;
+}
+body.dark-mode .diagonal-arrow-link:hover {
+    background-color: #d4fc34;
+    color: #111827;
+}
+
+/* Custom styling for Card 4 (Lime Gradient Card) arrow link (Always black background, hover white) */
+.card-lime-arrow-link {
+    background-color: #111827 !important;
+    color: #ffffff !important;
+    transition: all 300ms ease-in-out !important;
+}
+.card-lime-arrow-link:hover {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    transform: scale(1.05) !important;
+}
+
+/* Dark Mode styles for Product Detail Modal */
+body.dark-mode #modal-content {
+    background-color: #1c1c1e !important;
+    color: #ffffff !important;
+}
+body.dark-mode #close-modal-btn {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+body.dark-mode #close-modal-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+body.dark-mode #modal-product-name,
+body.dark-mode #modal-product-price {
+    color: #ffffff !important;
+}
+body.dark-mode #modal-product-source {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode #modal-product-desc {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+body.dark-mode #qty-minus,
+body.dark-mode #qty-plus {
+    color: #ffffff !important;
+}
+body.dark-mode #qty-minus:hover,
+body.dark-mode #qty-plus:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark-mode #qty-input {
+    color: #ffffff !important;
+}
+body.dark-mode #modal-content hr {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Custom card product price and footer overrides in dark mode */
+body.dark-mode .product-price {
+    color: #ffffff !important;
+}
+body.dark-mode .product-price span {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+body.dark-mode footer,
+body.dark-mode footer *,
+body.dark-mode footer p,
+body.dark-mode footer a,
+body.dark-mode footer span {
+    color: #ffffff !important;
+}
+body.dark-mode footer a:hover {
+    color: #bef264 !important; /* light lime hover effect in dark mode */
+}
+body.dark-mode .zero-waste-label {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+body.dark-mode .product-category-badge {
+    color: #bef264 !important;
+    background-color: rgba(212, 252, 52, 0.15) !important;
+}
